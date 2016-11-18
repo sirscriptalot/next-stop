@@ -1,5 +1,6 @@
-"use strict"
+import React from "react"
+import ReactDOM from "react-dom"
 
-require("./styles/index.scss")
+import { HelloWorld } from "./components/hello-world"
 
-alert('Hello World')
+ReactDOM.render((<HelloWorld/>), document.getElementById("app"))
