@@ -1,0 +1,4 @@
+{
+  "testPathDirs": ["spec"],
+  "transform": {".*": "node_modules/babel-jest"}
+}
