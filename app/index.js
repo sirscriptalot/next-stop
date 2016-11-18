@@ -1,6 +1,20 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import { HelloWorld } from "./components/hello-world"
+import { Flux } from "./lib/flux"
+import { ProductsIndexContainer } from "./containers/products/index"
 
-ReactDOM.render((<HelloWorld/>), document.getElementById("app"))
+(function main() {
+  const flux        = new Flux
+  const currentUser = { locale: "en-us" }
+
+  ReactDOM.render(
+    <ProductsIndexContainer
+      currentUser = { currentUser }
+      flux        = { flux }
+    />,
+    document.getElementById("app")
+  )
+})()
+
+
