@@ -1,5 +1,3 @@
-"use strict";
-
 jest.dontMock("../../../app/lib/queue")
 
 import { Queue } from "../../../app/lib/queue"
@@ -58,6 +56,20 @@ describe("Queue", function () {
       const queue = new Queue([1, 2, 3])
 
       expect(queue.last()).toEqual(3)
+    })
+  })
+
+  describe("#isEmpty", function () {
+    it("returns true when _values is []", function () {
+      const queue = new Queue([])
+
+      expect(queue.isEmpty()).toEqual(true)
+    })
+
+    it("returns false when _values is not []", function () {
+      const queue = new Queue([1, 2, 3])
+
+      expect(queue.isEmpty()).toEqual(false)
     })
   })
 })
