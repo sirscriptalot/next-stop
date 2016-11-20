@@ -7,7 +7,7 @@ services:
     image: next-stop
     container_name: next-stop-container
     ports:
-      - "35729:35729" ## for live reload
-      - "8080:8080" ## for live reload
+      - "35729:35729" ## for live reload (untested)
+      - "8080:8080" ## webpack dev server
     volumes:
       - .:/next-stop
