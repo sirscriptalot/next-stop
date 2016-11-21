@@ -1,5 +1,5 @@
 import React from "react"
-import { ProductList } from "./_list"
+// import { ProductList } from "./_list"
 import { translate as t } from "../../helpers/translate"
 
 export function ProductIndex({ currentUser, products }) {

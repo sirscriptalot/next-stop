@@ -1,0 +1,13 @@
+version: '2'
+services:
+ webpack:
+    build:
+      context: .
+      dockerfile: docker.webpack
+    image: next-stop
+    container_name: next-stop-container
+    ports:
+      - "35729:35729" ## for live reload (untested)
+      - "8080:8080" ## webpack dev server
+    volumes:
+      - .:/next-stop
